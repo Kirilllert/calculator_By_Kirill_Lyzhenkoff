@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<style type="text/css">
+	html, body {
+		height: 100%
+;	}
+	.calculator{
+		flex-direction: column;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+		button,input{
+			display: inline-block;
+		}
+		#input,#input1{
+			border-radius: 10px;
+			border-color: #D2B48C;
+			padding:5px;
+
+		}
+		button{
+			border-radius: 10px;
+			background-color: #D2B48C;
+			border-color: #D2B48C;
+		}
+		.calculator__text-parent{
+			font-size: 50px;
+			font-family: 'Montserrat', sans-serif;
+			color: #FF4500;
+			display: block;
+		}
+		.calculator__text{
+			display: block;
+		}
+		.calculator__txt{
+			margin-top: 10px;
+		}
+		.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        height: 100%;
+}
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+	</style>
+</head>
+<body>
+	<div class="scale-up-center">
+		<div class="calculator">
+		<div class="calculator__text-parent">
+			<div class="calculator__text">
+			Адский калькулятор <i class="fas fa-fire"></i>
+		</div>
+		</div>
+		<br>
+		<div class="calculator__input">
+		<input id="input" type="" name="">
+		<button id="button">+</button>
+		<button id="button1">-</button>
+		<button id="button2">*</button>
+		<button id="button3">/</button>
+		<input id="input1" type="" name="">
+	</div>
+	<div class="calculator__txt">
+			*для тех у кого прям очень хорошо с математикой
+		</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		let input = document.getElementById('input');
+		let input1 = document.getElementById('input1');
+		let btn = document.getElementById('button');
+		let btn1 = document.getElementById('button1');
+		let btn2 = document.getElementById('button2');
+		let btn3 = document.getElementById('button3');
+		let sayd5 = document.getElementById('sayd')
+
+		btn.onclick = function (){
+			var number1 = input.value;
+			var number2 = input1.value;
+			var sayd = parseInt(number1) + parseInt(number2);
+			alert(sayd);
+		}
+		btn1.onclick = function (){
+			var number1 = input.value;
+			var number2 = input1.value;
+			var sayd = parseInt(number1) - parseInt(number2);
+			alert(sayd);
+		}
+		btn2.onclick = function (){
+			var number1 = input.value;
+			var number2 = input1.value;
+			var sayd = parseInt(number1) * parseInt(number2);
+			alert(sayd);
+		}
+		btn3.onclick = function (){
+			var number1 = input.value;
+			var number2 = input1.value;
+			var sayd = parseInt(number1) / parseInt(number2);
+			alert(sayd);
+
+		}
+
+	</script>
+</body>
+</html>
