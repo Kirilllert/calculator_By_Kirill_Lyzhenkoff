@@ -83,6 +83,7 @@
 		<button id="button1">-</button>
 		<button id="button2">*</button>
 		<button id="button3">/</button>
+		<button id="bytton4">abs</button>
 		<input id="input1" type="" name="">
 	</div>
 	<div class="calculator__txt">
@@ -98,7 +99,9 @@
 		let btn1 = document.getElementById('button1');
 		let btn2 = document.getElementById('button2');
 		let btn3 = document.getElementById('button3');
-		let sayd5 = document.getElementById('sayd')
+		let sayd5 = document.getElementById('sayd');
+		let btn5 = document.getElementById('button4')
+
 
 		btn.onclick = function (){
 			var number1 = input.value;
@@ -124,6 +127,10 @@
 			var sayd = parseInt(number1) / parseInt(number2);
 			alert(sayd);
 
+		}
+		btn5.onclick = function() {
+			var number1 = input.value;
+			var sayd = Math.abs(number1);
 		}
 
 	</script>
