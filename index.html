@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Калькулятор by Kirill Lyzhenkoff</title>
+	<title></title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	 <link rel="icon" href="icon.png/favicon.ico" type="image/x-icon">
-	
+	<link rel="icon" type="icon.png/favicon.ico" href="icon.png">
 	<style type="text/css">
 	html, body {
 		height: 100%
@@ -85,7 +84,9 @@
 		<button id="button1">-</button>
 		<button id="button2">*</button>
 		<button id="button3">/</button>
-		<button id="bytton4">abs</button>
+		<button id="button4">cbrt</button>
+		<button id="button5">pow</button>
+		<button id="button6">around</button>
 		<input id="input1" type="" name="">
 	</div>
 	<div class="calculator__txt">
@@ -95,14 +96,16 @@
 	</div>
 	<script type="text/javascript">
 
-		let input = document.getElementById('input');
-		let input1 = document.getElementById('input1');
-		let btn = document.getElementById('button');
-		let btn1 = document.getElementById('button1');
-		let btn2 = document.getElementById('button2');
-		let btn3 = document.getElementById('button3');
-		let sayd5 = document.getElementById('sayd');
-		let btn5 = document.getElementById('button4')
+		let input = document.getElementById ('input');
+		let input1 = document.getElementById ('input1');
+		let btn = document.getElementById ('button');
+		let btn1 = document.getElementById ('button1');
+		let btn2 = document.getElementById ('button2');
+		let btn3 = document.getElementById ('button3');
+		let sayd5 = document.getElementById ('sayd');
+		let btn4 = document.getElementById ('button4');
+		let btn5 = document.getElementById ('button5');
+		let btn6 = document.getElementById ('button6')
 
 
 		btn.onclick = function (){
@@ -128,11 +131,23 @@
 			var number2 = input1.value;
 			var sayd = parseInt(number1) / parseInt(number2);
 			alert(sayd);
-
 		}
-		btn5.onclick = function() {
+		btn4.onclick = function() {
 			var number1 = input.value;
-			var sayd = Math.abs(number1);
+			var sayd = Math.cbrt(number1) ;
+			alert (sayd);
+		}
+		btn5.onclick = function (){
+			var number1 = input.value;
+			var number2 = input1.value;
+			var sayd = Math.pow(number1, number2)
+			alert(sayd);
+		}
+		btn6.onclick = function (){
+			var number1 = input.value;
+			var number2 = input1.value;
+			var sayd = Math.round(number1)
+			alert(sayd);
 		}
 
 	</script>
